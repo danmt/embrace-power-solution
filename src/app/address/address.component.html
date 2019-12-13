@@ -1,0 +1,70 @@
+<app-wizard-step
+  [title]="title"
+  (previousStepClicked)="goToPreviousStep()"
+  (nextStepClicked)="goToNextStep()"
+>
+  <form [formGroup]="addressForm" [attr.aria-label]="title">
+    <label>
+      <span>Country *</span>
+      <input
+        class="form-control"
+        type="text"
+        formControlName="country"
+        required
+      />
+    </label>
+    <span class="form-error" *ngIf="submitted && countryCtrl?.errors?.required">
+      Country is required
+    </span>
+
+    <label>
+      <span>State *</span>
+      <input
+        class="form-control"
+        type="text"
+        formControlName="state"
+        required
+      />
+    </label>
+    <span class="form-error" *ngIf="submitted && stateCtrl?.errors?.required">
+      State is required
+    </span>
+
+    <label>
+      <span>City *</span>
+      <input class="form-control" type="text" formControlName="city" required />
+    </label>
+    <span class="form-error" *ngIf="submitted && cityCtrl?.errors?.required">
+      City is required
+    </span>
+
+    <label>
+      <span>Street *</span>
+      <input
+        class="form-control"
+        type="text"
+        formControlName="street"
+        required
+      />
+    </label>
+    <span class="form-error" *ngIf="submitted && streetCtrl?.errors?.required">
+      Street is required
+    </span>
+
+    <label>
+      <span>Building *</span>
+      <input
+        class="form-control"
+        type="text"
+        formControlName="building"
+        required
+      />
+    </label>
+    <span
+      class="form-error"
+      *ngIf="submitted && buildingCtrl?.errors?.required"
+    >
+      Building is required
+    </span>
+  </form>
+</app-wizard-step>

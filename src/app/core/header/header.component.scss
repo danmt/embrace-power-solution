@@ -1,0 +1,69 @@
+@import "~src/assets/styles/variables.scss";
+
+:host {
+  display: block;
+}
+
+header {
+  background-color: darken($base-color, 20);
+  min-height: 10vh;
+
+  nav {
+    height: 100%;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+
+      li {
+        display: flex;
+        margin: 0.5rem;
+        list-style-type: none;
+        justify-content: center;
+
+        & > * {
+          color: darken(white, 20);
+          padding: 0.5rem;
+          font-size: 1.5rem;
+          letter-spacing: 0.1rem;
+          line-height: 1.5;
+        }
+
+        a {
+          text-decoration: none;
+
+          &:visited {
+            color: darken(white, 30);
+          }
+
+          &.active,
+          &:active,
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+            color: white;
+          }
+
+          &:hover,
+          &:focus {
+            outline: 1px white solid;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  header {
+    nav {
+      ul {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  }
+}

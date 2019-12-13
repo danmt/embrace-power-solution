@@ -1,0 +1,17 @@
+<section>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+
+  <div>
+    <button id="previous-button" (click)="goToPreviousStep()">
+      <i class="material-icons">navigate_before</i> <span>Previous</span>
+    </button>
+
+    <ng-content></ng-content>
+
+    <button id="next-button" (click)="goToNextStep()">
+      <span>Next</span> <i class="material-icons">navigate_next</i>
+    </button>
+  </div>
+</section>

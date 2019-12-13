@@ -1,0 +1,74 @@
+@import '~src/assets/styles/variables.scss';
+
+form {
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+  background: darken($base-color, 10);
+  overflow-y: auto;
+}
+
+label {
+  display: flex;
+  justify-content: space-around;
+  min-height: 2rem;
+  padding: 1rem;
+
+  flex-direction: column;
+
+  span {
+    color: white;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  &:hover,
+  &:focus-within {
+    outline: 1px white solid;
+  }
+}
+
+.form-control {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 1.3rem;
+  padding-bottom: 0.3rem;
+  margin: 1rem 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  & option {
+    background-color: darken($base-color, 10);
+  }
+}
+
+.form-error {
+  display: block;
+  color: red;
+  margin: 0.5rem 0;
+}
+
+@media all and (min-width: 768px) {
+  label {
+    flex-direction: row;
+
+    span {
+      font-size: 1.5rem;
+      width: 30%;
+    }
+  }
+
+  .form-control {
+    width: 60%;
+    margin: 0;
+  }
+}

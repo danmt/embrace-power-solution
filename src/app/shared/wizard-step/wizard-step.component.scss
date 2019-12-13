@@ -1,0 +1,72 @@
+@import '~src/assets/styles/variables.scss';
+
+header {
+  background-color: darken($base-color, 15);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2.8rem;
+  }
+}
+
+section {
+  height: 80vh;
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+
+    button {
+      border: none;
+      background: darken($base-color, 10);
+      height: max-content;
+      align-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      padding: 0.5rem 0;
+      outline: 0.1rem darken(white, 30) solid;
+      cursor: pointer;
+
+      &#previous-button {
+        padding-right: 1rem;
+      }
+
+      &#next-button {
+        padding-left: 1rem;
+      }
+
+      span {
+        display: none;
+      }
+
+      &:focus,
+      &:hover {
+        outline: 0.2rem white solid;
+        background: darken($base-color, 20);
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  section {
+    div {
+      button {
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}

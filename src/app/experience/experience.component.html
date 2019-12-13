@@ -1,0 +1,62 @@
+<app-wizard-step
+  [title]="title"
+  (previousStepClicked)="goToPreviousStep()"
+  (nextStepClicked)="goToNextStep()"
+>
+  <form [formGroup]="experienceForm" [attr.aria-label]="title">
+    <label>
+      <span>Degree *</span>
+      <select class="form-control" formControlName="degree" required>
+        <option>No Degree</option>
+        <option>Associate Degree</option>
+        <option>Bachelor Degree</option>
+        <option>Master Degree</option>
+        <option>Doctor Degree</option>
+      </select>
+    </label>
+    <span class="form-error" *ngIf="submitted && degreeCtrl?.errors?.required">
+      Degree is required
+    </span>
+
+    <label>
+      <span>Years *</span>
+      <input
+        class="form-control"
+        type="number"
+        formControlName="years"
+        required
+      />
+    </label>
+    <span class="form-error" *ngIf="submitted && yearsCtrl?.errors?.required">
+      Years is required
+    </span>
+
+    <label>
+      <span>Status *</span>
+      <select class="form-control" formControlName="status" required>
+        <option>Not employed</option>
+        <option>Employed</option>
+        <option>Self employed</option>
+      </select>
+    </label>
+    <span class="form-error" *ngIf="submitted && statusCtrl?.errors?.required">
+      Status is required
+    </span>
+
+    <label>
+      <span>References *</span>
+      <textarea
+        class="form-control"
+        rows="4"
+        formControlName="reference"
+        required
+      ></textarea>
+    </label>
+    <span
+      class="form-error"
+      *ngIf="submitted && referenceCtrl?.errors?.required"
+    >
+      Reference is required
+    </span>
+  </form>
+</app-wizard-step>
