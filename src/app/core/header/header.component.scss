@@ -1,4 +1,4 @@
-@import "~src/assets/styles/variables.scss";
+@import '~src/assets/styles/variables.scss';
 
 :host {
   display: block;
@@ -51,6 +51,13 @@ header {
           &:focus {
             outline: 1px white solid;
           }
+        }
+
+        button {
+          opacity: 0.5;
+          cursor: not-allowed;
+          border: none;
+          background-color: transparent;
         }
       }
     }
