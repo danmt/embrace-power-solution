@@ -656,6 +656,8 @@ You'll find some good old mobile first design also in this stylesheet, feel free
 
 Now that the first step is done, we can easily reuse all that logic for the others. We can have as many steps as we want, just remember to connect it through the Router and to add it to the header as one of the steps. I'm sure you can do that by yourself, so I'll just skip ahead.
 
+If you dont wan't to do all we've done by yourself but skip to the state management [here's a ready to customize version](https://github.com/danmt/embrace-power-solution/tree/steps-layout)
+
 ### The State
 
 If you created the new steps and all that. You maybe wondering what now? All these modules are separated and now is hard to keep track of the state of the whole form. You may have even noticed that if you jump between states you lose the values you entered. None of those are problems to us, because we know that NgRx is here to help. What you'll need to do now is:
@@ -897,7 +899,7 @@ export class PersonalComponent implements OnInit {
 
 What we are doing here is simply getting the latest state from the store and patching it in the form. Then we are creating a stream that emits an action every time an input has changed.
 
-If you repeat this for each step, you'll have a full multi step form with validation that is also accessible and with an optimized bundle.
+If you repeat this for each step, you'll have a full multi step form with validation that is also accessible. If you want to skip ahead [here's a fully working version of app](https://github.com/danmt/embrace-power-solution)
 
 ## Conclusion
 
