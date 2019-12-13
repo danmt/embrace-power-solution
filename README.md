@@ -1,4 +1,4 @@
-# ReactiveForms III: Embrace the Power
+# Modular Multi Step Form with NgRx in less than 20 minutes
 
 This is the third part of the ReactiveForm series. Now that you know how to use ReactiveForms and techniques to make it accessible, it's time to do the real thing. We are gonna work on a multi step form, with validation that has to be accessible. If that wasn't enough we are going to use NgRx to keep in sync the multiple steps.
 
