@@ -1,3 +1,8 @@
+
+https://www.thisdot.co/blog/modular-multi-step-form-with-ngrx-in-less-than-20-minutes
+https://github.com/danmt/embrace-power-solution
+npm i @angular-devkit/build-angular@0.803.24
+
 # Modular Multi Step Form with NgRx in less than 20 minutes
 
 This is the third part of the ReactiveForm series. Now that you know how to use ReactiveForms and techniques to make it accessible, it's time to do the real thing. We are gonna work on a multi step form, with validation that has to be accessible. If that wasn't enough, we are going to use NgRx to keep the multiple steps in sync.
